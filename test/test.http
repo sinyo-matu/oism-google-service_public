@@ -1,0 +1,39 @@
+GET http://localhost:1323/google/health_check HTTP/1.1
+
+###
+GET https://oism.app/google/health_check HTTP/1.1
+
+###
+POST http://localhost:1323/google/code_exchange HTTP/1.1
+content-type: application/json
+
+{
+    "userExId": "77f2e7a0-ad0f-4042-a0b1-86e1ecb45ced",
+    "code":"4/0AWgavdcJSvS7LV2UoEXw-HaEP9N4bzobnh20pLTzpUK_9ZwFZFql3Cj68DJ-FWFsxcZ43w"
+}
+###
+GET https://oism.app/google/auth_url HTTP/1.1
+
+###
+POST https://oism.app/google/insert_task HTTP/1.1
+content-type: application/json
+
+{
+    "userExId": "77f2e7a0-ad0f-4042-a0b1-86e1ecb45ced",
+    "task": {
+        "listName": "POSCOMキャンセル待ち",
+        "title": "A2123FAY006",
+        "notes":"顧客名：やさしいさん2",
+        "duo": "2023-10-12T07:20:50.52Z"
+    }
+}
+
+###
+GET  http://oism.app/google/check_google_action_status/5af59e36-ead2-4e56-97d5-85d68d40e714 HTTP/1.1
+
+###
+POST https://chat.googleapis.com/v1/spaces/AAAA7sOLemY/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=5UQFaNshi7vdFw11uxvNmS27fYYZgNP8GWuxdX4ipTI%3D HTTP/1.1
+
+{
+    "text":"ABC"
+}
